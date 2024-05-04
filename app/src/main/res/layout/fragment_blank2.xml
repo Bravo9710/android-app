@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C6AAA9"
+    tools:context=". fragment2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-69dp">
+
+        <TextView
+            android:id="@+id/titleAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="82dp"
+            android:text="Add new expences"
+            android:textColor="#E8121212"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toTopOf="@+id/addTitleTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/addTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:text="Add title"
+            android:textColor="#E8121212"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/titleInput"
+            app:layout_constraintStart_toStartOf="@+id/titleInput"
+            app:layout_constraintTop_toBottomOf="@+id/titleAdd" />
+
+        <EditText
+            android:id="@+id/titleInput"
+            android:layout_width="302dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginEnd="54dp"
+            android:layout_marginBottom="17dp"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:hint="Title"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textColorHint="#75000000"
+            android:tooltipText="test2"
+            app:layout_constraintBottom_toTopOf="@+id/addNotesTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addTitleTextView" />
+
+        <TextView
+            android:id="@+id/addNotesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Add notes"
+            android:textColor="#E8121212"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/notesInput"
+            app:layout_constraintStart_toStartOf="@+id/notesInput"
+            app:layout_constraintTop_toBottomOf="@+id/titleInput" />
+
+        <EditText
+            android:id="@+id/notesInput"
+            android:layout_width="302dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginEnd="54dp"
+            android:layout_marginBottom="24dp"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:hint="Notes"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textColorHint="#75000000"
+            android:tooltipText="test2"
+            app:layout_constraintBottom_toTopOf="@+id/removeFundsButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addNotesTextView" />
+
+        <ImageButton
+            android:id="@+id/removeFundsButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="81dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/remove"
+            app:layout_constraintBottom_toTopOf="@+id/amountInput"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/addFundsButton"
+            app:layout_constraintTop_toBottomOf="@+id/notesInput" />
+
+        <ImageButton
+            android:id="@+id/addFundsButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="86dp"
+            android:layout_marginEnd="84dp"
+            android:backgroundTint="@color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/add"
+            app:layout_constraintBottom_toBottomOf="@+id/removeFundsButton"
+            app:layout_constraintEnd_toStartOf="@+id/removeFundsButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/removeFundsButton" />
+
+        <EditText
+            android:id="@+id/amountInput"
+            android:layout_width="302dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="54dp"
+            android:layout_marginEnd="54dp"
+            android:layout_marginBottom="15dp"
+            android:background="#FFFFFF"
+            android:ems="10"
+            android:hint="Amount"
+            android:inputType="number|numberDecimal"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textColorHint="#75000000"
+            android:tooltipText="test2"
+            app:layout_constraintBottom_toTopOf="@+id/submitButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/removeFundsButton" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="126dp"
+            android:backgroundTint="#28AAF9"
+            android:text="Done"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/amountInput" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

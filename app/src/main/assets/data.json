@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "title": "Savings",
+    "notes": "Saving for the future",
+    "amount": 1000.00,
+    "income": true,
+    "date": "2022-01-01"
+  }
+]
